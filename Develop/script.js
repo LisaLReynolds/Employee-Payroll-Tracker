@@ -40,22 +40,15 @@ const collectEmployees = function () {
 // }
 
 // Display the average salary
+// to find average: add up all salaries and divide by lenth of array .length
 const displayAverageSalary = function (employeesArray) {
-  // TODO: Calculate and display the average salary
-  //to find average: add up all salaries and divide by lenth of array .length
-
-  //return average salary
-
   let sum = 0;
-
-  for (let i = 0; i < employeesAverage.length; i++) {
-    sum += employeesAverage[i];
+  for (let i = 0; i < employeesArray.length; i++) {
+    sum += parseInt(employeesArray[i].salary);
   }
-  let average = sum / employeesAverage.length;
-
-  console.log(`The average salary is${average}`);
+  let average = sum / employeesArray.length;
+  console.log(`The average salary is ${average.toFixed(2)}`);
 };
-//something is not working with the above code ????
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
@@ -131,3 +124,5 @@ const trackEmployeeData = function () {
 
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener("click", trackEmployeeData);
+
+
