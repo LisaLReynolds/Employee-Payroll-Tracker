@@ -22,7 +22,7 @@ const collectEmployees = function () {
       lastName: lastName,
       salary: salary,
     };
-
+    // .push() method will add one or more elements to the end of an array
     employees.push(employee);
 
     addAnotherEmployee = confirm("Would you like to add another employee?");
@@ -31,19 +31,31 @@ const collectEmployees = function () {
   return employees;
 };
 
-// if (isNaN(parseFloat(salary))) {
+// if (isNaN(salary)) {
 //   console.log(salary);
 //   number = 0;
 // } else {
 //   console.log(salary);
-//   number = parseFloat(salary);
+//   number = (salary);
 // }
 
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
-  console.log(employeesArray);
   // TODO: Calculate and display the average salary
+  //to find average: add up all salaries and divide by lenth of array .length
+
+  //return average salary
+
+  let sum = 0;
+
+  for (let i = 0; i < employeesAverage.length; i++) {
+    sum += employeesAverage[i];
+  }
+  let average = sum / employeesAverage.length;
+
+  console.log(`The average salary is${average}`);
 };
+//something is not working with the above code ????
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
