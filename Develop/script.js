@@ -1,10 +1,6 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector("#add-employees-btn");
 
-// if (isNaN(salary)) {
-//   console.log (0);
-// }
-
 // Collect employee data
 const collectEmployees = function () {
   //need to prompt user for first name, last name, and salary
@@ -124,5 +120,3 @@ const trackEmployeeData = function () {
 
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener("click", trackEmployeeData);
-
-
