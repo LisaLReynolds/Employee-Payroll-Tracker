@@ -11,7 +11,12 @@ const collectEmployees = function () {
   while (addAnotherEmployee) {
     const firstName = prompt("Please enter first name");
     const lastName = prompt("Please enter last name");
-    const salary = prompt("Please enter salary");
+    let salary = prompt("Please enter salary"); //use let here instead of const so that can change to 0 if salary isNaN
+
+    if (isNaN(salary)) {
+      //if salary isNaN will show as 0
+      salary = 0;
+    }
 
     const employee = {
       firstName: firstName,
@@ -26,14 +31,6 @@ const collectEmployees = function () {
 
   return employees;
 };
-
-// if (isNaN(salary)) {
-//   console.log(salary);
-//   number = 0;
-// } else {
-//   console.log(salary);
-//   number = (salary);
-// }
 
 // Display the average salary
 // to find average: add up all salaries and divide by lenth of array .length
